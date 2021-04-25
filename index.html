@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>git-flow cheatsheet</title>
+    <title>our-lovely-cli cheatsheet</title>
     <link href='https://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen,print">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,print">
@@ -18,19 +18,18 @@
 
 
 <div class="scrollblock">
-    <h2><a name="getting_started" href="#getting_started">Getting started</a></h2>
-    <p>Git flow needs to be initialized in order to customize your project setup.</p>
+    <h2><a name="getting_started" href="#getting_started">Getting Started</a></h2>
+    <p>Our-Lovely-CLI (olc) needs to be initialized in order to customize your project setup.</p>
     <p class="divider">&#9733; &#9733; &#9733;</p>
     <div class="col-1">
         <h3>Initialize</h3>
 
-        <p>Start using git-flow by initializing it inside an existing git repository:</p>
+        <p>Start using our-lovely-cli by initializing it inside an existing git repository:</p>
         <blockquote>
-            git flow init
+            git olc-rerun-setup
         </blockquote>
         <p>
-            You'll have to answer a few questions regarding the naming conventions for your branches.<br/>
-            It's recommended to use the default values.
+            You'll have to answer a few questions and generate some tokens.
         </p>
 
     </div>
@@ -48,7 +47,7 @@
 
     <ul class="narrow">
         <li>Develop new features for upcoming releases</li>
-        <li>Typically exist in developers repos only</li>
+        <li>May exist on github repo, or may exist in developers repos only</li>
     </ul>
     <p class="divider">&#9733; &#9733; &#9733;</p>
 
@@ -57,60 +56,57 @@
         <p>Development of new features starting from the 'develop' branch.</p>
         <p>Start developing a new feature with</p>
         <blockquote>
-            git flow feature start MYFEATURE
+            git workon TEAM-1234
         </blockquote>
-        <p>This action creates a new feature branch based on 'develop' and switches to it</p>
-
-        <!--
-        - Bump the version number now!
-        - Start committing last-minute fixes in preparing your release
-        - When done, run:
-
-             git flow release finish 'testrelease'
-
-
-
-        -->
+        <p>
+            This action performs the following:
+        </p>
+        <ul>
+            <li>Create branch 'feature/TEAM-1234'</li>
+            <li>Switch to the new branch</li>
+            <li>Assign Jira issue to you</li>
+            <li>Transition Jira issue to 'In Progress' status</li>
+        </ul>
     </div>
     <div class="col-2">
         <div class="feature-start"></div>
     </div>
 </div>
-
 <div class="scrollblock">
     <div class="col-1">
-        <h3>Finish up a feature</h3>
+        <h3>Make a commit</h3>
 
         <p>
-            Finish the development of a feature.
-            This action performs the following
+            Make a commit with an interactively formatted commit message<br/>
+            This action performs the following:
         </p>
         <ul>
-            <li>Merges MYFEATURE into 'develop'</li>
-            <li>Removes the feature branch</li>
-            <li>Switches back to 'develop' branch</li>
+            <li>Select a gitmoji</li>
+            <li>Select a JIRA issue</li>
+            <li>Add a one-line summary</li>
+            <li>Add a multi-line description</li>
+            <li>Add a multi-line test plan</li>
         </ul>
 
         <blockquote>
-            git flow feature finish MYFEATURE
+            git cm -s -S -a
         </blockquote>
     </div>
     <div class="col-2">
-        <div class="feature-end"></div>
+        <div class="commit"></div>
     </div>
 </div>
-
 <div class="scrollblock">
     <div class="col-1">
-        <h3>Publish a feature</h3>
+        <h3>Start a pull request</h3>
 
         <p>
-            Are you developing a feature in collaboration? <br/>
-            Publish a feature to the remote server so it can be used by other users.
+            Create a pull request for review on GitHub and "start" the Jira issue! <br/>
+            This will transition the Jira issue to "In Review" status.
         </p>
 
         <blockquote>
-            git flow feature publish MYFEATURE
+            git pull-request
         </blockquote>
     </div>
     <div class="col-2">
@@ -120,27 +116,25 @@
 
 <div class="scrollblock">
     <div class="col-1">
-        <h3>Getting a published feature</h3>
+        <h3>Land a feature</h3>
 
         <p>
-            Get a feature published by another user.
+            Land a pull-request on GitHub and transition Jira issue to 'Landed'<br/>
+            This action performs the following:
         </p>
+        <ul>
+            <li>Merges TEAM-1234 into 'develop'</li>
+            <li>Removes the feature branch</li>
+            <li>Switches back to 'develop' branch</li>
+            <li>Transition Jira issue to 'Landed' status</li>
+        </ul>
 
         <blockquote>
-            git flow feature pull origin MYFEATURE
+            git land TEAM-1234
         </blockquote>
-
-        <p>
-            You can track a feature on origin by using             
-        </p>
-        
-        <blockquote>
-            git flow feature track MYFEATURE
-        </blockquote>
-        
     </div>
     <div class="col-2">
-        <div class="feature-pull"></div>
+        <div class="feature-end"></div>
     </div>
 </div>
 
@@ -158,17 +152,8 @@
 
         <p>To start a release, use the git flow release command. It creates a release branch created from the 'develop' branch.</p>
         <blockquote>
-            git flow release start RELEASE [BASE]
+            git start-release
         </blockquote>
-        <p>You can optionally supply a <code>[BASE]</code> commit sha-1 hash to start the release from. The commit must
-            be on the
-            'develop' branch.</p>
-        <p class="divider">&#9733; &#9733; &#9733;</p>
-        <p>It's wise to publish the release branch after creating it to allow release commits by other developers. Do it similar to feature publishing with the command:</p>
-        <blockquote>
-            git flow release publish RELEASE
-        </blockquote>
-        <p>(You can track a remote release with the <br/><code>git flow release track RELEASE</code> command)</p>
     </div>
     <div class="col-2">
         <div class="release-start"></div>
@@ -187,7 +172,7 @@
             <li>Removes the release branch</li>
         </ul>
         <blockquote>
-            git flow release finish RELEASE
+            git release --finish RELEASE
         </blockquote>
         <p>Don't forget to push your tags with <code>git push origin --tags</code></p>
 
@@ -198,42 +183,6 @@
     </div>
 </div>
 
-<div class="scrollblock">
-    <h2><a name="hotfixes" href="#hotfixes">Hotfixes</a></h2>
-
-    <ul>
-        <li>Hotfixes arise from the necessity to act immediately upon an undesired state of a live production version
-        </li>
-        <li>May be branched off from the corresponding tag on the master branch that marks the production version.</li>
-    </ul>
-    <p class="divider">&#9733; &#9733; &#9733;</p>
-    <div class="col-1">
-        <h3>git flow hotfix start</h3>
-
-        <p>Like the other git flow commands, a hotfix is started with</p>
-        <blockquote>
-            git flow hotfix start VERSION [BASENAME]
-        </blockquote>
-        <p>The version argument hereby marks the new hotfix release name. Optionally you can specify a basename to start from.</p>
-    </div>
-    <div class="col-2">
-        <div class="hotfix-start"></div>
-    </div>
-</div>
-
-<div class="scrollblock">
-    <div class="col-1">
-        <h3>Finish a hotfix</h3>
-
-        <p>By finishing a hotfix it gets merged back into develop and master. Additionally the master merge is tagged with the hotfix version.</p>
-        <blockquote>
-            git flow hotfix finish VERSION
-        </blockquote>
-    </div>
-    <div class="col-2">
-        <div class="hotfix-end"></div>
-    </div>
-</div>
 
 <div>
     <div class="col-1"></div>
@@ -243,11 +192,6 @@
     </div>
 </div>
 
-
-<div class="scrollblock">
-    <h2><a name="commands" href="#commands">Commands</a></h2>
-    <img src="img/git-flow-commands.png" alt="git-flow commands"/>
-</div>
 
 </div>
 </body>
