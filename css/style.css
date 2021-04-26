@@ -161,7 +161,7 @@ code {
 
 .lines-big {
     width: 300px;
-    height: 2863px;
+    height: 6263px;
     background-repeat: repeat-y;
     background: url("../img/branch_lines.svg");
     position: absolute;
@@ -201,10 +201,61 @@ code {
     -moz-box-shadow: 5px 5px 7px #8db7bd;
 
 }
+.topic-commit {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('../img/topic_commit_lines.svg');
+    background-color: rgba(173, 215, 223, 0.8);
+    border: 2px dashed #008098;
+    border-radius: 25px;
+    width: 300px;
+    height: 161.5px;
+    position: relative;
+    z-index: 99;
+
+    box-shadow: 5px 5px 7px #8db7bd;
+    -webkit-box-shadow: 5px 5px 7px #8db7bd;
+    -moz-box-shadow: 5px 5px 7px #8db7bd;
+
+}
+.merge-topic {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('../img/merge_topic_lines.svg');
+    background-color: rgba(173, 215, 223, 0.8);
+    border: 2px dashed #008098;
+    border-radius: 25px;
+    width: 300px;
+    height: 161.5px;
+    position: relative;
+    z-index: 99;
+
+    box-shadow: 5px 5px 7px #8db7bd;
+    -webkit-box-shadow: 5px 5px 7px #8db7bd;
+    -moz-box-shadow: 5px 5px 7px #8db7bd;
+
+}
+.land-on-feature {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('../img/land_on_feature.svg');
+    background-color: rgba(173, 215, 223, 0.8);
+    border: 2px dashed #008098;
+    border-radius: 25px;
+    width: 300px;
+    height: 161.5px;
+    position: relative;
+    z-index: 99;
+
+    box-shadow: 5px 5px 7px #8db7bd;
+    -webkit-box-shadow: 5px 5px 7px #8db7bd;
+    -moz-box-shadow: 5px 5px 7px #8db7bd;
+
+}
 .feature-end {
     display: inline-block;
     background-repeat: no-repeat;
-    background-image: url('../img/merge_lines.svg');
+    background-image: url('../img/merge_feature_lines.svg');
     background-color: rgba(173, 215, 223, 0.8);
     border: 2px dashed #008098;
     border-radius: 25px;
@@ -221,7 +272,41 @@ code {
 .feature-start {
     display: inline-block;
     background-repeat: no-repeat;
-    background-image: url('../img/workon_lines.svg');
+    background-image: url('../img/feature_lines.svg');
+    background-color: rgba(173, 215, 223, 0.8);
+    border: 2px dashed #008098;
+    border-radius: 25px;
+    width: 300px;
+    height: 161.5px;
+    position: relative;
+    z-index: 99;
+
+    box-shadow: 5px 5px 7px #8db7bd;
+    -webkit-box-shadow: 5px 5px 7px #8db7bd;
+    -moz-box-shadow: 5px 5px 7px #8db7bd;
+
+}
+.workon-topic-start {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('../img/workon_topic_lines.svg');
+    background-color: rgba(173, 215, 223, 0.8);
+    border: 2px dashed #008098;
+    border-radius: 25px;
+    width: 300px;
+    height: 161.5px;
+    position: relative;
+    z-index: 99;
+
+    box-shadow: 5px 5px 7px #8db7bd;
+    -webkit-box-shadow: 5px 5px 7px #8db7bd;
+    -moz-box-shadow: 5px 5px 7px #8db7bd;
+
+}
+.workon-feature-start {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('../img/workon_feature_lines.svg');
     background-color: rgba(173, 215, 223, 0.8);
     border: 2px dashed #008098;
     border-radius: 25px;
