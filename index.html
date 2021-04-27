@@ -48,11 +48,10 @@
     <p class="divider">&#9733; &#9733; &#9733;</p>
     <div class="col-1">
         <h3>Start a new Software Task or Bugfix</h3>
-        <p>Development of a short-lived topic branch from the 'main' branch.</p>
-        <p>Start developing a new feature with:</p>
         <blockquote>
             git workon TEAM-5432
         </blockquote>
+        <p>Development of a short-lived topic branch from the 'main' branch.</p>
         <p>
             This action performs the following:
         </p>
@@ -70,8 +69,11 @@
 <div class="scrollblock">
     <div class="col-1">
         <h3>Make a ✨commit✨</h3>
+        <blockquote>
+            git cm -s -S -a
+        </blockquote>
         <p>
-            Make a ✨fancy✨ commit with an interactively formatted commit message<br/>
+            The `cm` will interactively make a ✨fancy✨ commit with an formatted commit message!<br/>
             This action performs the following:
         </p>
         <ul>
@@ -83,10 +85,6 @@
             <li>Add a multi-line description</li>
             <li>Makes the commit passing flags through</li>
         </ul>
-
-        <blockquote>
-            git cm -s -S -a
-        </blockquote>
     </div>
     <div class="col-2">
         <div class="topic-commit"></div>
@@ -95,15 +93,13 @@
 <div class="scrollblock">
     <div class="col-1">
         <h3>Start a pull request</h3>
-
+        <blockquote>
+            git pull-request
+        </blockquote>
         <p>
             Create a pull request for review on GitHub and "start" the Jira issue! <br/>
             Optionally transitions the Jira issue to "In Review" status.
         </p>
-
-        <blockquote>
-            git pull-request
-        </blockquote>
     </div>
     <div class="col-2">
         <div class="feature-publish"></div>
@@ -112,39 +108,38 @@
 <div class="scrollblock">
     <div class="col-1">
         <h3>Make a regular commit</h3>
-        <p>
-            Make a commit completely normally. BYOE (E- editor).<br/>
-            This action performs the following:
-        </p>
-        <ul>
-            <li>Makes the commit passing flags through</li>
-        </ul>
-
         <blockquote>
             git commit -s -S -a 
         </blockquote>
+        <p>
+            Make a commit completely normally.<br/>
+            No frills. BYOE (E- editor).<br/>
+            This action performs the following:
+        </p>
+        <ul>
+            <li>Makes the commit as normal</li>
+        </ul>
     </div>
     <div class="col-2">
         <div class="topic-commit"></div>
     </div>
 </div>
-<div class="
+
 <div class="scrollblock">
     <div class="col-1">
-        <h3>Land on main</h3>
-        <p>
-            Land a topic branch onto main<br/>
-            This action performs the following:
-        </p>
-        <ul>
-            <li>Merges 'TEAM-5432' into main</li>
-            <li>Removes the topic branch</li>
-            <li>Optionally Transitions the JIRA issue to 'Landed'</li>
-        </ul>
-
+        <h3>Land on 'main'</h3>
         <blockquote>
             git land
         </blockquote>
+        <p>
+            Land onto 'main'.<br/>
+            This action performs the following:
+        </p>
+        <ul>
+            <li>Merges 'TEAM-5432' into 'main'</li>
+            <li>Removes the topic branch</li>
+            <li>Optionally Transitions the JIRA issue to 'Landed'</li>
+        </ul>
     </div>
     <div class="col-2">
         <div class="merge-topic"></div>
@@ -161,12 +156,11 @@
 
     <div class="col-1">
         <h3>Start a new feature</h3>
-        <p>Development of new long-lived feature starting from the 'main' branch.</p>
-        <p>Allows QE to test one big feature or a group of smaller ones</p>
-        <p>Start developing a new feature with:</p>
         <blockquote>
             git checkout -b feature/EPIC-4444
         </blockquote>
+        <p>Development of new long-lived feature starting from the 'main' branch.</p>
+        <p>Helps QE to test a group of small changes</p>
         <p>
             This action performs the following:
         </p>
@@ -182,11 +176,11 @@
 <div class="scrollblock">
     <div class="col-1">
         <h3>Start working</h3>
-        <p>Begin a Jira Task or Bug fix.</p>
-        <p>Start developing a new topic branch with:</p>
         <blockquote>
             git workon TEAM-1234
         </blockquote>
+        <p>Start developing a new topic branch.</p>
+        <p>Begin a Jira Task or Bug fix.</p>
         <p>
             This action performs the following:
         </p>
@@ -203,62 +197,78 @@
 </div>
 <div class="scrollblock">
     <div class="col-1">
-        <h3>Make a commit</h3>
-        <p>
-            Make a commit with an interactively formatted commit message<br/>
-            This action performs the following:
-        </p>
-        <ul>
-            <li>Select a gitmoji</li>
-            <li>Select a JIRA issue</li>
-            <li>Add a one-line summary</li>
-            <li>Add a multi-line description</li>
-            <li>Add a multi-line test plan</li>
-        </ul>
-
+        <h3>Make a ✨commit✨</h3>
         <blockquote>
             git cm -s -S -a
         </blockquote>
+        <p>
+            The `cm` will interactively make a ✨fancy✨ commit with an formatted commit message!<br/>
+            This action performs the following:
+        </p>
+        <ul>
+            <li>Select a gitmoji ✨🐛🎨👌 or not!</li>
+            <li>Suggests a JIRA issue</li>
+            <li>Add a one-line summary</li>
+            <li>Add a multi-line description</li>
+            <li>Add a multi-line test plan</li>
+            <li>Add a multi-line description</li>
+            <li>Makes the commit passing flags through</li>
+        </ul>
     </div>
     <div class="col-2">
-        <div class="commit"></div>
+        <div class="topic-commit"></div>
     </div>
 </div>
 <div class="scrollblock">
     <div class="col-1">
         <h3>Start a pull request</h3>
-
+        <blockquote>
+            git pull-request
+        </blockquote>
         <p>
             Create a pull request for review on GitHub and "start" the Jira issue! <br/>
             Optionally transition the Jira issue to "In Review" status.
         </p>
-
-        <blockquote>
-            git pull-request
-        </blockquote>
     </div>
     <div class="col-2">
         <div class="feature-publish"></div>
     </div>
 </div>
-
+<div class="scrollblock">
+    <div class="col-1">
+        <h3>Make a regular commit</h3>
+        <blockquote>
+            git commit -s -S -a 
+        </blockquote>
+        <p>
+            Make a commit completely normally.<br/>
+            No frills. BYOE (E- editor).<br/>
+            This action performs the following:
+        </p>
+        <ul>
+            <li>Makes the commit</li>
+        </ul>
+    </div>
+    <div class="col-2">
+        <div class="topic-commit"></div>
+    </div>
+</div>
 <div class="scrollblock">
     <div class="col-1">
         <h3>Land on a feature</h3>
+        <blockquote>
+            git land TEAM-1234
+        </blockquote>
         <p>
             Land a pull-request on GitHub and transition Jira issue to 'Landed'<br/>
             This action performs the following:
         </p>
         <ul>
-            <li>Merges TEAM-1234 into 'feature/EPIC-4444'</li>
+            <li>Merges 'TEAM-1234' into 'feature/EPIC-4444'</li>
             <li>Removes the topic branch</li>
             <li>Switches back to 'feature/EPIC-4444' branch</li>
             <li>Optionally Transitions the JIRA issue to 'Landed'</li>
         </ul>
-
-        <blockquote>
-            git land TEAM-1234
-        </blockquote>
     </div>
     <div class="col-2">
         <div class="land-on-feature"></div>
@@ -267,19 +277,18 @@
 <div class="scrollblock">
     <div class="col-1">
         <h3>Land a feature</h3>
-        <p>
-            Land a feature branch onto main<br/>
-            This action performs the following:
-        </p>
-        <ul>
-            <li>Merges 'feature/EPIC-4444' into main</li>
-            <li>Removes the feature branch</li>
-            <li>Optionally Transitions the JIRA issue to 'Landed'</li>
-        </ul>
-
         <blockquote>
             git land --feature
         </blockquote>
+        <p>
+            Land onto 'main'<br/>
+            This action performs the following:
+        </p>
+        <ul>
+            <li>Merges 'feature/EPIC-4444' into 'main'</li>
+            <li>Removes the feature branch</li>
+            <li>Optionally Transitions the JIRA issue to 'Landed'</li>
+        </ul>
     </div>
     <div class="col-2">
         <div class="feature-end"></div>
@@ -287,7 +296,9 @@
 </div>
 <div class="scrollblock">
     <h2><a name="release" href="#release">Make a release</a></h2>
-
+        <blockquote>
+            git start-release
+        </blockquote>
     <ul>
         <li>Support preparation of a new production release</li>
         <li>Allow for minor bug fixes and preparing meta-data for a release</li>
@@ -297,9 +308,6 @@
         <h3>Start a release</h3>
 
         <p>To start a release, use the git flow release command. It creates a release branch created from the 'main' branch.</p>
-        <blockquote>
-            git start-release
-        </blockquote>
     </div>
     <div class="col-2">
         <div class="release-start"></div>
@@ -309,7 +317,9 @@
 <div class="scrollblock">
     <div class="col-1">
         <h3>Finish up a release</h3>
-
+        <blockquote>
+            git release --finish RELEASE
+        </blockquote>
         <p>Finishing a release is one of the big steps in git branching. It performs several actions:</p>
         <ul>
             <li>Merges the release branch back into 'master'</li>
@@ -317,11 +327,7 @@
             <li>Back-merges the release into 'main'</li>
             <li>Removes the release branch</li>
         </ul>
-        <blockquote>
-            git release --finish RELEASE
-        </blockquote>
         <p>Don't forget to push your tags with <code>git push origin --tags</code></p>
-
     </div>
     <div class="col-2">
         <div class="release-end"></div>
