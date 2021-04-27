@@ -69,17 +69,19 @@
 </div>
 <div class="scrollblock">
     <div class="col-1">
-        <h3>Make a commit</h3>
+        <h3>Make a ✨commit✨</h3>
         <p>
-            Make a commit with an interactively formatted commit message<br/>
+            Make a ✨fancy✨ commit with an interactively formatted commit message<br/>
             This action performs the following:
         </p>
         <ul>
-            <li>Select a gitmoji</li>
-            <li>Select a JIRA issue</li>
+            <li>Select a gitmoji ✨🐛🎨👌 or not!</li>
+            <li>Suggests a JIRA issue</li>
             <li>Add a one-line summary</li>
             <li>Add a multi-line description</li>
             <li>Add a multi-line test plan</li>
+            <li>Add a multi-line description</li>
+            <li>Makes the commit passing flags through</li>
         </ul>
 
         <blockquote>
@@ -96,7 +98,7 @@
 
         <p>
             Create a pull request for review on GitHub and "start" the Jira issue! <br/>
-            This will transition the Jira issue to "In Review" status.
+            Optionally transitions the Jira issue to "In Review" status.
         </p>
 
         <blockquote>
@@ -109,6 +111,26 @@
 </div>
 <div class="scrollblock">
     <div class="col-1">
+        <h3>Make a regular commit</h3>
+        <p>
+            Make a commit completely normally. BYOE (E- editor).<br/>
+            This action performs the following:
+        </p>
+        <ul>
+            <li>Makes the commit passing flags through</li>
+        </ul>
+
+        <blockquote>
+            git commit -s -S -a 
+        </blockquote>
+    </div>
+    <div class="col-2">
+        <div class="topic-commit"></div>
+    </div>
+</div>
+<div class="
+<div class="scrollblock">
+    <div class="col-1">
         <h3>Land on main</h3>
         <p>
             Land a topic branch onto main<br/>
@@ -117,6 +139,7 @@
         <ul>
             <li>Merges 'TEAM-5432' into main</li>
             <li>Removes the topic branch</li>
+            <li>Optionally Transitions the JIRA issue to 'Landed'</li>
         </ul>
 
         <blockquote>
@@ -207,7 +230,7 @@
 
         <p>
             Create a pull request for review on GitHub and "start" the Jira issue! <br/>
-            This will transition the Jira issue to "In Review" status.
+            Optionally transition the Jira issue to "In Review" status.
         </p>
 
         <blockquote>
@@ -230,7 +253,7 @@
             <li>Merges TEAM-1234 into 'feature/EPIC-4444'</li>
             <li>Removes the topic branch</li>
             <li>Switches back to 'feature/EPIC-4444' branch</li>
-            <li>Transition Jira issue to 'Landed' status</li>
+            <li>Optionally Transitions the JIRA issue to 'Landed'</li>
         </ul>
 
         <blockquote>
@@ -251,6 +274,7 @@
         <ul>
             <li>Merges 'feature/EPIC-4444' into main</li>
             <li>Removes the feature branch</li>
+            <li>Optionally Transitions the JIRA issue to 'Landed'</li>
         </ul>
 
         <blockquote>
